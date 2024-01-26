@@ -21,11 +21,12 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function BannerSection() {
+function PremiumFeature() {
     const classes = useStyles();
 
-    return (
-        <Box className={classes.bannerMainBox}>
+  return (
+    <>
+       <Box className={classes.bannerMainBox}>
             <Container maxWidth="md" style={{ position: "relative" }}>
                 <img src="../images/home-banner-image.png" alt="" style={{ width: "100%" }} />
                 <Box className={classes.bannerTextBox}>
@@ -34,7 +35,8 @@ function BannerSection() {
                 </Box>
             </Container>
         </Box>
-    )
+    </>
+  )
 }
 
-export default BannerSection
+export default PremiumFeature
