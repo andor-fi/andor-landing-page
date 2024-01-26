@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, Typography, makeStyles, Button } from "@material-ui/core";
+import { Grid, Box, Typography, makeStyles, Button, Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -37,12 +37,16 @@ const useStyles = makeStyles((theme) => ({
     width:"248px",
     margin:"10px 0px 0px 0px",
       justifyContent:"space-between"
-  }
-
- 
- 
-
-  
+  },
+bannerTextBox:{
+    display:"flex",
+    justifyContent:"space-between",
+    width:"100%",
+    padding:"0px 40px",
+    [theme.breakpoints.down('xs')]: {
+        padding:"0px 10px",
+      },
+}
  
 }))
 
@@ -52,13 +56,17 @@ export default function Footer() {
     footerButtonIcon,
     textColor,
     textColorFormate,
-    subContent
+    subContent,
+    bannerMainBox,
+    bannerTextBox
   } = useStyles()
 
   return (
-    <Box  mt={5} pt={5}>
-      <Grid container spacing={4} justifyContent="space-evenly">
-        <Grid item lg={4} md={4} className={footer} >
+    <Box className={bannerMainBox}>
+        <Container maxWidth="md" style={{position:"relative"}}>
+        <Box className={bannerTextBox}>
+      <Grid container spacing={4} justifyContent="space-between">
+        <Grid item lg={6} md={6} className={footer} >
           <Box className={textColor}>
           Andor Fi
           </Box>
@@ -78,6 +86,8 @@ export default function Footer() {
            
         </Grid>
       </Grid>
+      </Box>
+      </Container>
     </Box>
   );
 }
