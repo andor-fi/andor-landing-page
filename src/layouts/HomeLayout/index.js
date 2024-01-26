@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import { useHistory } from 'react-router-dom'
-import Footer from './Footer'
 import TopBar from './TopBar'
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +30,6 @@ const MainLayout = ({ children }) => {
       ></div>
 
       <div className={classes.MainLayout}>{children}</div>
-     <Footer />
     </div>
   )
 }
