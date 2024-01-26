@@ -66,18 +66,22 @@ const headersData = [
   {
     label: 'HOME',
     href: '/',
+    class:"homeList"
   },
   {
     label: 'About Andor-Fi',
     href: '/flow-chart',
+    class:"aboutList"
   },
   {
     label: 'Why us?',
     href: '/add-token',
+    class:"whyUsList"
   },
   {
     label: 'Features',
     href: '/tokens',
+    class:"FeaturesList"
   },
 ]
 
@@ -95,6 +99,7 @@ const headersData2 = [
 const useStyles = makeStyles((theme) => ({
   menuButton: {
     color: theme.palette.text.black,
+    margin:"0px 40px",
     // borderBottom: '5px solid transparent',
     padding: ' 0px 10px',
     fontSize: ' 16px',
