@@ -13,6 +13,7 @@ export default {
     fontWeight: 500,
     fontSize: 30,
     fontFamily: "'Saira Semi Condensed', sans-serif",
+    color: "#fff",
   },
   h3: {
     fontWeight: 500,
@@ -47,7 +48,7 @@ export default {
   },
   body1: {
     fontSize: 16,
-    color: "#898CA9",
+    color: "#fff",
     fontFamily: "'Saira Semi Condensed', sans-serif",
   },
   body2: {
