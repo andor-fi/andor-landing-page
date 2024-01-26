@@ -1,40 +1,81 @@
 import React from "react";
-import { Grid, Box, Typography, makeStyles } from "@material-ui/core";
+import { Grid, Box, Typography, makeStyles, Button } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+
+  footer: {
+    padding: '0',
+    maxWidth:"65%"
+  },
+  footerButtonIcon:{
+    width:"253px",
+    height:"65px",
+    borderRadius:"20px",
+    fontSize:"20px",
+    lineHeight:"24px",
+    fontWeight:"500",
+    color:"#000000",
+    background:"#CED0DA"
+
+  },
+  textColor:{
+    color: "#fff !important",
+    fontSize:"20px",
+    lineHeight:"24px",
+    fontWeight:"500",
+    margin:"0px 0px 20px 0px"
+  },
+  textColorFormate:{
+    color: "#fff !important",
+    fontSize:"16px",
+    lineHeight:"18px",
+    fontWeight:"400",
+    color:"#CED0DA"
+  },
+  subContent:{
+    display:"flex",
+    width:"248px",
+    margin:"10px 0px 0px 0px",
+      justifyContent:"space-between"
+  }
+
+ 
+ 
+
+  
+ 
+}))
 
 export default function Footer() {
-  const classes = useStyles();
+  const {
+    footer,
+    footerButtonIcon,
+    textColor,
+    textColorFormate,
+    subContent
+  } = useStyles()
 
   return (
-    <Box className={classes.mainFooter} mt={5} pt={5}>
-      <Grid container spacing={5} justifyContent="space-between">
-        <Grid item lg={5}>
-          <Box>
-            <img src="/images/kian-logo.png" alt="Logo" width="100%" style={{maxWidth:"180px"}} />
+    <Box  mt={5} pt={5}>
+      <Grid container spacing={4} justifyContent="space-evenly">
+        <Grid item lg={4} md={4} className={footer} >
+          <Box className={textColor}>
+          Andor Fi
           </Box>
-          <Typography variant="body1" className="textColorFormate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temposLorem ipsum dolor sit amet</Typography>
+          <Typography variant="body1" className={textColorFormate}>
+          ANDOR is a free-to-use chat bot that lets you perform crypto 
+          transactions on the go, through your chat app. The bot also enables you to safely trade and 
+          snipe for opportunities across multiple chains.
+          </Typography>
         </Grid>
-        <Grid item lg={2}>
-            <Typography variant="h3" style={{marginBottom:"10px"}}>App</Typography>
-            <Typography variant="body1" className="textColorFormate">Lending</Typography>
-            <Typography variant="body1" className="textColorFormate">Stake</Typography>
-            <Typography variant="body1" className="textColorFormate">Swap</Typography>
-            <Typography variant="body1" className="textColorFormate">Bridge</Typography>
-        </Grid>
-        <Grid item lg={2}>
-        <Typography variant="h3" style={{marginBottom:"10px"}}>Docs</Typography>
-            <Typography variant="body1" className="textColorFormate">GitHub</Typography>
-            <Typography variant="body1" className="textColorFormate">Documnets</Typography>
-            <Typography variant="body1" className="textColorFormate">Medium</Typography>
-            <Typography variant="body1" className="textColorFormate">Audit</Typography>
-        </Grid>
-        <Grid item lg={2}>
-        <Typography variant="h3" style={{marginBottom:"10px"}}>Social</Typography>
-            <Typography variant="body1" className="textColorFormate">Twitter</Typography>
-            <Typography variant="h4">Community</Typography>
-            <Typography variant="body1" className="textColorFormate">Telegram</Typography>
-            <Typography variant="body1" className="textColorFormate">Discord</Typography>
+        <Grid item lg={4} md={4}>
+        <Button variant="contained" className={footerButtonIcon}>Try Andor Fi</Button>
+        <Box className={subContent} >
+        <img src="/images/Social.png" alt="Logo" width="100%" style={{maxWidth:"56px"}} />
+        <img src="/images/Linkdin.png" alt="Logo" width="100%" style={{maxWidth:"56px"}} />
+        <img src="/images/Decord.png" alt="Logo" width="100%" style={{maxWidth:"56px"}} />
+        </Box>
+           
         </Grid>
       </Grid>
     </Box>

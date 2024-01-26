@@ -31,7 +31,7 @@ const MainLayout = ({ children }) => {
       ></div>
 
       <div className={classes.MainLayout}>{children}</div>
-      {/* <Footer /> */}
+     <Footer />
     </div>
   )
 }
