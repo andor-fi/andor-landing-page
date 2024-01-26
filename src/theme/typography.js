@@ -30,7 +30,7 @@ export default {
   h5: {
     fontWeight: 500,
     fontSize: 18,
-    color: "black",
+    color: "#fff",
     fontFamily: "'Saira Semi Condensed', sans-serif",
   },
   h6: {

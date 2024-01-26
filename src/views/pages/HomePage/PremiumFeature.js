@@ -1,42 +1,51 @@
 import React from 'react';
-import { Container, Box, makeStyles, Typography } from '@material-ui/core';
+import { Container, Box, makeStyles, Typography, Button } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
 
-    bannerMainBox: {
-        position: "relative",
-        top: "-5rem"
-    },
-    bannerTextBox: {
-        position: "absolute",
-        top: "66%",
-        display: "flex",
-        justifyContent: "space-between",
-        width: "100%",
-        padding: "0px 55px 0px 20px",
+    premiumMainBox: {
+        border: "1px solid rgb(235 238 255 / 15%)",
+        borderRadius: "29px",
+        padding: "60px",
+        textAlign:'center',
         [theme.breakpoints.down('xs')]: {
-            padding: "0px 15px 0px 5px",
+            padding: "30px 20px",
         },
-    }
+        "& img": {
+            position: "relative",
+            top: "-60px",
+            [theme.breakpoints.down('xs')]: {
+                top: "-30px",
+            },
+        },
+        "& h3":{
+            marginBottom:"35px",
+        }
+    },
 }));
 
 function PremiumFeature() {
     const classes = useStyles();
 
-  return (
-    <>
-       <Box className={classes.bannerMainBox}>
+    return (
+        <>
             <Container maxWidth="md" style={{ position: "relative" }}>
-                <img src="../images/home-banner-image.png" alt="" style={{ width: "100%" }} />
-                <Box className={classes.bannerTextBox}>
-                        <Typography variant="h3">Welcome to <br /> Andor Fi</Typography>
-                        <Typography variant="body1" style={{ maxWidth: "155px",display:"inline-block" }}>Trading made simpler, faster and accessible for everyone.</Typography>
+                <Box className={classes.premiumMainBox}>
+                    <Box>
+                        <img src="../images/premium-card.png" width="100%" />
+                    </Box>
+                    <Box>
+                        <Typography variant='body1' style={{marginBottom:"30px"}}>About Andor Fi</Typography>
+                        <Typography variant='h3'>ANDOR is a AI powered bot interface that enables user to perform crypto transactions anywhere with internet. </Typography>
+                        <Typography variant='h3'>Our product suite gives traders a competitive edge in the market - Faster trades, Alpha scans, Leverage, Risk management, Onchain tooling, and more. </Typography>
+                        <Typography variant='h3'>Premium features are unlocked through access codes, which are received from the protocol.</Typography>
+                        <Button variant="contained" style={{minWidth:"160px"}}>Find Out More</Button>
+                    </Box>
                 </Box>
             </Container>
-        </Box>
-    </>
-  )
+        </>
+    )
 }
 
 export default PremiumFeature
