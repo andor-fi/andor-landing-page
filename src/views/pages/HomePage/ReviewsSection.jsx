@@ -17,8 +17,8 @@ const reviewData = [{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5],
 const useStyles = makeStyles((theme) => ({
 
     bannerMainBox: {
-        position: "relative",
-        top: "-5rem",
+        // position: "relative",
+        // top: "-5rem",
     },
     bannerTextBox: {
         border: "1px solid #EBEEFF",

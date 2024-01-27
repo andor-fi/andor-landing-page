@@ -70,17 +70,17 @@ const headersData = [
   },
   {
     label: 'About Andor-Fi',
-    href: '/flow-chart',
+    href: '/about',
     class:"aboutList"
   },
   {
     label: 'Why us?',
-    href: '/add-token',
+    href: '/why us',
     class:"whyUsList"
   },
   {
     label: 'Features',
-    href: '/tokens',
+    href: '/feature',
     class:"FeaturesList"
   },
 ]

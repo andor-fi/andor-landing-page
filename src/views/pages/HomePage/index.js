@@ -4,6 +4,10 @@ import PremiumFeature from './PremiumFeature';
 import WhyAndorFi from './WhyAndorFi';
 import Footer from './Footer'
 import ReviewsSection from './ReviewsSection'
+import AndorMoileFeature from './AndorMoileFeature';
+import Protects from "./Protects"
+import YourJarvis from './YourJarvis';
+
 
 function index() {
   return (
@@ -11,7 +15,10 @@ function index() {
     <BannerSection/>   
     <PremiumFeature/>
     <WhyAndorFi/>
-    <ReviewsSection/>
+    <AndorMoileFeature/>
+    <Protects/>
+    <YourJarvis/>
+    {/* <ReviewsSection/> */}
     <Footer/>
     </>
   )

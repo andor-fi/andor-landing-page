@@ -11,9 +11,11 @@ const useStyles = makeStyles((theme) => ({
         },
         "& h1": {
             color: "#CED0DA",
-            fontSize: "54px",
-            lineHeight: "72px",
-            fontWeight: "700",
+            [theme.breakpoints.up('sm')]: {
+                fontSize: "54px",
+                lineHeight: "72px",
+                fontWeight: "700",
+            },
         },
         "& h4": {
             marginTop:"20px",
@@ -91,7 +93,7 @@ function WhyAndorFi() {
     const classes = useStyles();
 
     return (
-        <>
+        <Box>
             <Container maxWidth="md" style={{ position: "relative" }}>
                 <Box className={classes.whyAndorFiMainBox} pt={5} pb={5} mt={5} mb={5}>
                     <Box textAlign={"center"} mt={4} mb={4}>
@@ -133,7 +135,7 @@ function WhyAndorFi() {
                     </Grid>
                 </Box>
             </Container>
-        </>
+        </Box>
     )
 }
 
