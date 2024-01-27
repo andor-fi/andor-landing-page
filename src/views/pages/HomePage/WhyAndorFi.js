@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box, makeStyles, Typography, Grid } from '@material-ui/core';
+import { Container, Box, makeStyles, Typography, Grid, Button } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -39,6 +39,50 @@ const useStyles = makeStyles((theme) => ({
             width: "100%",
             height:"auto"
         },
+    },
+    sliderCards:{
+        background: "linear-gradient(-90deg, #5275F1, #5191F1,#7EAFF8)",
+        width:"185px",
+        height:"185px",
+        borderRadius: "14px",
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center",
+        flexDirection:"column"
+    },
+    iconBox:{
+        width:"80px",
+        height:"80px",
+        backgroundColor:"#D9D9D9",
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center",
+        borderRadius:"50%",
+        "& img":{
+            width:"auto",
+            height:"auto",
+        }
+    },
+    actionBtns:{
+        background: "linear-gradient(-90deg, #FFFFFF, #B1B3ED)",
+        marginTop:"20px",
+        borderRadius:"9px",
+        minWidth:"110px"
+    },
+    cardSlider:{
+        display:"flex",
+        justifyContent:"center",
+    },
+    tradSliderCards:{
+        background: "transparent",
+        border:"2px solid #7EAFF8",
+        width:"185px",
+        height:"185px",
+        borderRadius: "14px",
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center",
+        flexDirection:"column"
     }
 }));
 
@@ -57,7 +101,24 @@ function WhyAndorFi() {
                     <Grid container spacing={4}>
                         <Grid item xs={12} sm={12} md={6}>
                         <Box className={classes.whyLeftCard}>
-                            <img src="../images/why-andor-card.png"/>
+                            <Grid container spacing={4}>
+                            <Grid item xs={12} sm={6} md={6}>
+                                <Box className={classes.sliderCards}>
+                                    <Box className={classes.iconBox}>
+                                    <img src="../images/users.png"/>
+                                    </Box>
+                                    <Button className={classes.actionBtns}>Borrow</Button>
+                                </Box>
+                                </Grid>
+                                <Grid item xs={12} sm={6} md={6}>
+                                <Box className={classes.tradSliderCards}>
+                                    <Box className={classes.iconBox}>
+                                    <img src="../images/trade-icon.png"/>
+                                    </Box>
+                                    <Button variant="contained" style={{minWidth:"110px",marginTop:"20px",}}>Trade</Button>
+                                </Box>
+                                </Grid>
+                            </Grid>
                             <Typography variant='h4'>Leverage</Typography>
                             <Typography variant='body1'>Borrow, trade & repay. Amplify your trading positions with leverage</Typography>
                             </Box>
