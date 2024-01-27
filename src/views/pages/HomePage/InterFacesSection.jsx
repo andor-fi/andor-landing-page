@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "20px",
         border: "1px solid rgb(235 238 255 / 15%)",
         padding: "30px",
-        marginBottom: "70px",
-        background: "linear-gradient(-90deg, #FFFFFF, #B1B3ED)",
+        marginBottom: "90px",
+        background: "linear-gradient(-90deg,#B1B3ED,#EBEEFF, #CED0DA)",
     },
     interfaceCard: {
         width: "100%",
