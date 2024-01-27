@@ -25,7 +25,10 @@ const useStyles = makeStyles((theme) => ({
     contentBox: {
         background: "linear-gradient(160deg, #5275F1, #5191F1, #7EAFF8)",
         padding:"3rem 5rem",
-        borderRadius:"19px"
+        borderRadius:"19px",
+        [theme.breakpoints.down('xs')]: {
+            padding:"3rem 1rem",
+        },
     }
 }));
 

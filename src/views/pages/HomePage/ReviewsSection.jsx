@@ -18,10 +18,11 @@ const reviewData = [{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5],
 const useStyles = makeStyles((theme) => ({
 
     bannerMainBox: {
-        border: '1px solid rgb(235 238 255 / 15%)',
+        border: "1px solid #EBEEFF",
+        borderRadius: "19px",
         padding: "60px",
         [theme.breakpoints.down('xs')]: {
-            padding: "0px 10px",
+            padding: "30px 10px",
         },
     },
     reviewCards: {
@@ -57,9 +58,9 @@ const settings = {
     dots: true,
     slidesToShow: 3,  // Adjust this based on the number of cards you want to show
     slidesToScroll: 1,  // Adjust this based on the number of cards you want to scroll
-    infinite: false,
+    infinite: true,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     // centerMode: true,
     //  centerPadding: '0',
@@ -74,7 +75,14 @@ const settings = {
         {
             breakpoint: 800,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
                 slidesToScroll: 1,
             },
         },
