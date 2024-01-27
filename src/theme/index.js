@@ -228,7 +228,7 @@ const baseOptions = {
       },
       contained: {
         borderRadius: "50px",
-        fontWeight: 500,
+        fontWeight: 400,
         padding: "5px 5px",
         background: "linear-gradient(-90deg, #5275F1, #5191F1,#7EAFF8)",
         color: "#fff",

@@ -64,7 +64,7 @@ const StyledMenuItem = withStyles((theme) => ({
 }))(MenuItem)
 const headersData = [
   {
-    label: 'HOME',
+    label: 'Home',
     href: '/',
     class:"homeList"
   },
@@ -98,12 +98,12 @@ const headersData2 = [
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
-    color: theme.palette.text.black,
+    color: "rgb(235 238 255 / 70%)",
     margin:"0px 40px",
     // borderBottom: '5px solid transparent',
     padding: ' 0px 10px',
     fontSize: ' 16px',
-    fontWeight: ' 800 !important',
+    fontWeight: ' 400 !important',
     minWidth: '100px',
     lineHeight: '24px',
     borderRadius: 0,
@@ -569,7 +569,7 @@ export default function Header() {
         // onClick={handleClick}
         variant="contained"
       >
-        Try
+        Try Now
         {/* <FaUserCircle style={{ fontSize: '25px', marginRight: '10px' }} />{' '}
         {!applicationCheck ? 'Sign In' : ''}
         <BiChevronDown /> */}

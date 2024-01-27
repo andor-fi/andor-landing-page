@@ -48,13 +48,13 @@ export default {
   },
   body1: {
     fontSize: 16,
-    color: "#fff",
+    color: "rgb(235 238 255 / 70%)",
     fontFamily: "'Space Grotesk', sans-serif",
   },
   body2: {
     fontSize: 14,
     fontWeight: "300",
-    color: "#fff",
+    color: "rgb(235 238 255 / 70%)",
     lineHeight: "21px",
     fontFamily: "'Space Grotesk', sans-serif",
   },
