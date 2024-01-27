@@ -17,6 +17,9 @@ function index() {
     <PremiumFeature/>
     <WhyAndorFi/>
     <InterFacesSection/>
+    <AndorMoileFeature/>
+    <Protects/>
+    <YourJarvis/>
     <ReviewsSection/>
     <Footer/>
     </>
