@@ -29,7 +29,13 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             maxWidth: "unset",
         },
+        "& h3": {
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent"
+        }
     },
+
     featureBox2: {
         maxWidth: "270px",
         marginLeft: "auto",
@@ -37,12 +43,22 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: "unset",
             marginLeft: "unset",
         },
+        "& h3": {
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent"
+        }
     },
     featureBox3: {
         maxWidth: "240px",
         [theme.breakpoints.down('xs')]: {
             maxWidth: "unset",
         },
+        "& h3": {
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent"
+        }
     },
     featureBox4: {
         maxWidth: "270px",
@@ -51,6 +67,16 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: "unset",
             marginLeft: "unset",
         },
+        "& h3": {
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent"
+        }
+    },
+    heading:{
+        "background": "linear-gradient(#CED0DA, #B1B3ED)",
+        "WebkitBackgroundClip": "text",
+        "color": "transparent"
     }
 }));
 
@@ -68,13 +94,13 @@ function AndorMoileFeature() {
                         <Grid item xs={12} sm={6} md={6} lg={6}>
                             <Box className={classes.featureBox1}>
                                 <Typography variant="h3">Sniper</Typography>
-                                <Typography variant="body1">Seize rapid price movements and arbitrage chances as our bot identifies and executes trades upon meeting specific conditions.</Typography>
+                                <Typography variant="body1" className={classes.heading}>Seize rapid price movements and arbitrage chances as our bot identifies and executes trades upon meeting specific conditions.</Typography>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6} lg={6}>
                             <Box className={classes.featureBox2}>
                                 <Typography variant="h3">DEX Trading</Typography>
-                                <Typography variant="body1">Easily trade on DEX platforms from your chat app, offering Buy/Sell with Limit, Market, and Partial order options.</Typography>
+                                <Typography variant="body1" className={classes.heading}>Easily trade on DEX platforms from your chat app, offering Buy/Sell with Limit, Market, and Partial order options.</Typography>
                             </Box>
                         </Grid>
                     </Grid>
@@ -82,14 +108,14 @@ function AndorMoileFeature() {
                         <Grid item xs={12} sm={6} md={6} lg={6}>
                             <Box className={classes.featureBox3}>
                                 <Typography variant="h3">Leverage</Typography>
-                                <Typography variant="body1">Spot trading with leverage.
+                                <Typography variant="body1" className={classes.heading}>Spot trading with leverage.
                                     Place limit orders for buy & sell while enjoying max leverage per coin.</Typography>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6} lg={6}>
                             <Box className={classes.featureBox4}>
                                 <Typography variant="h3">Alpha scan</Typography>
-                                <Typography variant="body1">Aggregate data from diverse tools and platforms, and offer AI-driven trade recommendations. Keep an eye on wallet activities of whales, influencers, and alpha traders.</Typography>
+                                <Typography variant="body1" className={classes.heading}>Aggregate data from diverse tools and platforms, and offer AI-driven trade recommendations. Keep an eye on wallet activities of whales, influencers, and alpha traders.</Typography>
                             </Box>
                         </Grid>
                     </Grid>

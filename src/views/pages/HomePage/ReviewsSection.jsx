@@ -18,7 +18,7 @@ const reviewData = [{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5],
 const useStyles = makeStyles((theme) => ({
 
     bannerMainBox: {
-        border: "1px solid #EBEEFF",
+        border: "1px solid rgb(235 238 255 / 15%)",
         borderRadius: "19px",
         padding: "60px",
         [theme.breakpoints.down('xs')]: {
@@ -115,7 +115,7 @@ function ReviewsSection() {
                 <Box className={classes.bannerMainBox}>
                     <Box style={{ textAlign: "center" }} mb={5}>
                         <Typography variant="body1">User Feedbacks</Typography>
-                        <Typography variant="h3" style={{ width: "100%", maxWidth: "100%" }}>Andor Fi has helped traders with its valuable features, making a significant impact in the industry.</Typography>
+                        <Typography variant="h3" style={{ width: "100%", maxWidth: "100%" }}>Andor Fi has helped traders with its valuable <br/>features, making a significant impact in the<br/> industry.</Typography>
                     </Box>
                     <Slider {...settings}>
                         {reviewData &&

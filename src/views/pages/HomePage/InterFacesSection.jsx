@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     interfaceCard: {
         width: "100%",
         height: "363px",
-        padding: "10px",
+        padding: "16px",
         borderRadius: "10px",
         "background": "linear-gradient(#FFFFFF, #B1B3ED)",
         "& h2": {

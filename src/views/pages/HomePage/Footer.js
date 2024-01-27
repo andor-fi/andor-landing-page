@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth:"65%"
   },
   footerButtonIcon:{
+    fontFamily: "'Poppins', sans-serif",
     width:"253px",
     height:"65px",
     borderRadius:"20px",

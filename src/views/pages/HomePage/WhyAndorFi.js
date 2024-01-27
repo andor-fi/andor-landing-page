@@ -19,9 +19,12 @@ const useStyles = makeStyles((theme) => ({
                 fontWeight: "700",
             },
         },
-        "& h4": {
+        "& h3": {
             marginTop: "20px",
-            marginBottom: "10px"
+            marginBottom: "10px",
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent"
         }
     },
     whyRightCard: {
@@ -57,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     iconBox: {
         width: "60px",
         height: "60px",
-        backgroundColor: "#D9D9D9",
+        backgroundColor: "rgb(217 217 217 / 20%)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -87,6 +90,11 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
+    },
+    heading:{
+        "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent"
     }
 }));
 
@@ -206,14 +214,15 @@ function WhyAndorFi() {
                                         </Box>
                                     </Box>
                                 </Slider>
-                                <Typography variant='h4'>Leverage</Typography>
-                                <Typography variant='body1'>Borrow, trade & repay. Amplify your trading positions with leverage</Typography>
+                                <br/>
+                                <Typography variant='h3'>Leverage</Typography>
+                                <Typography variant='body1' className={classes.heading}>Borrow, trade & repay. Amplify your trading positions with leverage</Typography>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={6}>
                             <Box className={classes.whyRightCard}>
                                 <img src="../images/why-andor-card.png" />
-                                <Typography variant='h4'>2-way Profit Share</Typography>
+                                <Typography variant='h3'>2-way Profit Share</Typography>
                                 <Typography variant='body1'>Trade with your friends, and earn profits together</Typography>
                             </Box>
                         </Grid>

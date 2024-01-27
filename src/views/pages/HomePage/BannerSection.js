@@ -30,7 +30,7 @@ function BannerSection() {
                 <img src="../images/home-banner-image.png" alt="" style={{ width: "100%" }} />
                 <Box className={classes.bannerTextBox}>
                         <Typography variant="h3">Welcome to <br /> Andor Fi</Typography>
-                        <Typography variant="body1" style={{ maxWidth: "155px",display:"inline-block" }}>Trading made simpler, faster and accessible for everyone.</Typography>
+                        <Typography variant="body1" style={{ maxWidth: "185px",display:"inline-block" }}>Trading made simpler, faster and accessible for everyone.</Typography>
                 </Box>
             </Container>
         </Box>

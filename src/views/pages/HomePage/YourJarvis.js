@@ -6,16 +6,33 @@ const useStyles = makeStyles((theme) => ({
 
     jarvisMainBox: {
         "& h1": {
-            color: "#CED0DA",
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent",
+            marginTop: "-10px",
+            marginBottom: "-10px",
             [theme.breakpoints.up('sm')]: {
                 fontSize: "54px",
-                lineHeight: "72px",
+                lineHeight: "64px",
                 fontWeight: "700",
             },
         },
         "& h4": {
             marginTop: "20px",
-            marginBottom: "10px"
+            marginBottom: "10px",
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent",
+        },
+        "& h3": {
+            fontWeight: 700,
+            fontSize: "26px",
+            lineHeight: "38px",
+            marginTop: "20px",
+            marginBottom: "10px",
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent",
         }
     },
     leftBtnBox1: {
@@ -43,32 +60,39 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "12px",
         marginTop: "30px"
     },
-    tryOutBtn:{
-        border:"2px solid #7EAFF8",
-        color:"#fff",
-        borderRadius:"12px",
-        minWidth:"155px",
-        marginTop:"30px",
-        paddingTop:"10px",
-        paddingBottom:"10px",
-        width:"100%",
-        maxWidth:"315px"
+    tryOutBtn: {
+        border: "2px solid #7EAFF8",
+        color: "#fff",
+        borderRadius: "12px",
+        minWidth: "155px",
+        marginTop: "30px",
+        paddingTop: "10px",
+        paddingBottom: "10px",
+        width: "100%",
+        maxWidth: "315px",
+        fontFamily: "'Poppins', sans-serif",
+        fontWeight: "500"
     },
-    gridContainer:{
+    gridContainer: {
         [theme.breakpoints.down('xs')]: {
-            justifyContent:"center"
+            justifyContent: "center"
         },
     },
-    gridItem1:{
-        textAlign:"end",
+    gridItem1: {
+        textAlign: "end",
         [theme.breakpoints.down('xs')]: {
-            textAlign:"center",
+            textAlign: "center",
         },
     },
-    gridItem2:{
+    gridItem2: {
         [theme.breakpoints.down('xs')]: {
-            textAlign:"center",
+            textAlign: "center",
         },
+    },
+    heading: {
+        "background": "linear-gradient(#CED0DA, #B1B3ED)",
+        "WebkitBackgroundClip": "text",
+        "color": "transparent",
     }
 }));
 
@@ -81,7 +105,9 @@ function YourJarvis() {
             <Container maxWidth="md">
                 <Box className={classes.jarvisMainBox} pt={5} pb={5} mt={5} mb={5}>
                     <Box textAlign={"center"} mt={4} mb={4}>
-                        <Typography variant='h1'>Andor Fi is <br /> your jarvis</Typography>
+                        <Typography variant='h1'>Andor Fi Is</Typography>
+                        <Typography variant='h1'> Your Jarvis</Typography>
+
                     </Box>
                     <Grid container spacing={2} alignItems="center" className={classes.gridContainer}>
                         <Grid item xs={6} sm={4} md={4} lg={3} className={classes.gridItem1}>
@@ -105,8 +131,8 @@ function YourJarvis() {
                         </Grid>
                     </Grid>
                     <Box textAlign={"center"} mt={5}>
-                        <Typography variant="h4">How it Works?</Typography>
-                        <Typography variant="body1" style={{margin:"0px auto",maxWidth:"315px"}}>Andor-Fi, your cryptocurrency trading Jarvis, empowers you with commands like buying, selling, sniping, mirror settings, stop loss, and comprehensive data access.</Typography>
+                        <Typography variant="h3">How it Works?</Typography>
+                        <Typography variant="body1" style={{ margin: "0px auto", maxWidth: "375px" }} className={classes.heading}>Andor-Fi, your cryptocurrency trading Jarvis, empowers you with commands like buying, selling, sniping, mirror settings, stop loss, and comprehensive data access.</Typography>
                         <Button className={classes.tryOutBtn}>Try Out</Button>
                     </Box>
                 </Box>

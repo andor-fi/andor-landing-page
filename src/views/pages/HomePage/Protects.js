@@ -10,7 +10,9 @@ const useStyles = makeStyles((theme) => ({
             height: "90px"
         },
         "& h1": {
-            color: "#CED0DA",
+            "background": "linear-gradient(#CED0DA, #B1B3ED)",
+            "WebkitBackgroundClip": "text",
+            "color": "transparent",
             [theme.breakpoints.up('sm')]: {
                 fontSize: "54px",
                 lineHeight: "72px",
@@ -24,11 +26,17 @@ const useStyles = makeStyles((theme) => ({
     },
     contentBox: {
         background: "linear-gradient(160deg, #5275F1, #5191F1, #7EAFF8)",
-        padding:"3rem 5rem",
+        padding:"3rem 3rem",
         borderRadius:"19px",
         [theme.breakpoints.down('xs')]: {
             padding:"3rem 1rem",
         },
+    },
+    title:{
+        fontSize:"14px",
+        lineHeight:"18px",
+        fontWeight:"400",
+        color:"#FFFFFF"
     }
 }));
 
@@ -47,15 +55,15 @@ function Protects() {
                     <Box className={classes.contentBox}>
                         <Box>
                             <Typography variant='h4'>Anti-MEV</Typography>
-                            <Typography variant="body1">Safeguards against rug pulls and Miner Extractable Value (MEV) concerns, ensuring a safer trading environment.</Typography>
+                            <Typography variant="body1" className={classes.title} >Safeguards against rug pulls and Miner Extractable Value (MEV) concerns, ensuring a safer trading environment.</Typography>
                         </Box>
                         <Box mt={4}>
                             <Typography variant='h4'>Anti-Rug</Typography>
-                            <Typography variant="body1">mechanisms prevent you from trading with suspicious tokens. </Typography>
+                            <Typography variant="body1" className={classes.title}>mechanisms prevent you from trading with suspicious tokens. </Typography>
                         </Box>
                         <Box mt={4}>
                             <Typography variant='h4'>Anti-Dump</Typography>
-                            <Typography variant="body1">Built-in AI algorithm to protect from market dumps.</Typography>
+                            <Typography variant="body1" className={classes.title}>Built-in AI algorithm to protect from market dumps.</Typography>
                         </Box>
                     </Box>
                 </Box>
