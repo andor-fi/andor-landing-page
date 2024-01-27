@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
 
 const settings = {
     color: "white",
-    dots: true,
+    dots: false,
     slidesToShow: 2,  // Adjust this based on the number of cards you want to show
     slidesToScroll: 1,  // Adjust this based on the number of cards you want to scroll
     infinite: true,
