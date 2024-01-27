@@ -203,7 +203,7 @@ const baseOptions = {
       containedSecondary: {
         background: "#fff !important",
         // border: "1px solid White",
-        fontFamily: "'Saira Semi Condensed', sans-serif",
+        fontFamily: "'Space Grotesk', sans-serif",
         color: "#000",
         height: "43px",
         padding: "10px 33px !important",
@@ -221,7 +221,7 @@ const baseOptions = {
         fontSize: "15px !important",
         lineHeight: "21px",
         borderRadius: "50px",
-        fontFamily: "'Saira Semi Condensed', sans-serif",
+        fontFamily: "'Space Grotesk', sans-serif",
         background: "#0B0B0F !important",
         // border: "1px solid black",
         fontWeight: "600",
@@ -232,7 +232,7 @@ const baseOptions = {
         padding: "5px 5px",
         background: "linear-gradient(-90deg, #5275F1, #5191F1,#7EAFF8)",
         color: "#fff",
-        fontFamily: "'Saira Semi Condensed', sans-serif",
+        fontFamily: "'Space Grotesk', sans-serif",
         "&.Mui-disabled": {
           backgroundColor: "#7e7e7e70 !important",
           color: "#fff !important",
@@ -266,7 +266,7 @@ const baseOptions = {
         },
       },
       text: {
-        fontFamily: "'Saira Semi Condensed', sans-serif",
+        fontFamily: "'Space Grotesk', sans-serif",
       },
     },
     MuiList: {
