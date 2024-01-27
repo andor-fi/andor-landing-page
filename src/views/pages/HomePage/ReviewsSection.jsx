@@ -6,155 +6,133 @@ import 'slick-carousel/slick/slick-theme.css';
 import StarIcon from "@material-ui/icons/Star";
 
 const reviewData = [{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
-    { image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
-    {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
-    // {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
-    // {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
-    // {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
-    // { image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." }
+{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." }
 ]
 
 const useStyles = makeStyles((theme) => ({
 
     bannerMainBox: {
-        // position: "relative",
-        // top: "-5rem",
-    },
-    bannerTextBox: {
         border: "1px solid #EBEEFF",
-        height: "574px",
-        display: "flex",
-        justifyContent: "center",
-        width: "100%",
         padding: "60px",
         [theme.breakpoints.down('xs')]: {
             padding: "0px 10px",
         },
     },
-    reviewBox: {
-        width: "316px",
-        height: "244px",
+    reviewCards: {
         border: "1px solid gray",
-        borderRadius: "14px",
-        padding: "18px 18px 28px 18px",
-        margin:"20px",
+        padding: "13px",
+        borderRadius: "9px",
     },
-    reviewBoxTitle: {
-        fontSize: "18px !important",
-        fontWeight: "600",
-        color: "#CED0DA"
-
+    cardHeader: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        "& img": {
+            width: "40px",
+            height: "40px",
+        }
+    },
+    cardBody: {
+        "& h4": {
+            color: "#CED0DA",
+            marginBottom: "10px"
+        }
     },
     reviewBoxDescription: {
         fontSize: "12px !important",
         fontWeight: "400",
         color: "#CED0DA"
-
     }
 
 }));
 
 const settings = {
-    color:"white",
+    color: "white",
     dots: true,
-  slidesToShow: 3,  // Adjust this based on the number of cards you want to show
-  slidesToScroll: 1,  // Adjust this based on the number of cards you want to scroll
-  infinite: false,
-  arrows: false,
-  autoplay: false,
-  autoplaySpeed: 3000,
+    slidesToShow: 3,  // Adjust this based on the number of cards you want to show
+    slidesToScroll: 1,  // Adjust this based on the number of cards you want to scroll
+    infinite: false,
+    arrows: false,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    // centerMode: true,
+    //  centerPadding: '0',
     responsive: [
         {
-          breakpoint: 1025,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          },
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            },
         },
         {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          },
+            breakpoint: 800,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            },
         },
         {
-          breakpoint: 450,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
+            breakpoint: 450,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            },
         },
-      ],
-      customPaging: (i) => (
-    <div
-      style={{
-        width: '10px',
-        height: '10px',
-        backgroundColor: 'white', // Set your desired color
-        borderRadius: '50%',
-        cursor: 'pointer',
-      }}
-    />
-  ),
-  };
+    ],
+    // customPaging: (i) => (
+    //     <div
+    //         style={{
+    //             width: '10px',
+    //             height: '10px',
+    //             backgroundColor: 'white', // Set your desired color
+    //             borderRadius: '50%',
+    //             cursor: 'pointer',
+    //         }}
+    //     />
+    // ),
+};
 function ReviewsSection() {
     const classes = useStyles();
 
     return (
-        <Box className={classes.bannerMainBox}>
-            <Container maxWidth="md" style={{ position: "relative" }}>
-                <Box className={classes.bannerTextBox}>
-                    <Box>
-                        <Box style={{ textAlign: "center" }}>
-                            <Typography variant="body1">User Feedbacks</Typography>
-                            <Typography variant="h3" style={{ width: "100%", maxWidth: "100%" }}>Andor Fi has helped traders with its valuable features, making a significant impact in the industry.</Typography>
-                        </Box>
-                        
-                        {/*
-                        <Slider {...settings}>
-        */}
+        <Box>
+            <Container maxWidth="md">
+                <Box className={classes.bannerMainBox}>
+                    <Box style={{ textAlign: "center" }} mb={5}>
+                        <Typography variant="body1">User Feedbacks</Typography>
+                        <Typography variant="h3" style={{ width: "100%", maxWidth: "100%" }}>Andor Fi has helped traders with its valuable features, making a significant impact in the industry.</Typography>
+                    </Box>
+                    <Slider {...settings}>
                         {reviewData &&
                             reviewData.map((data, i) => {
-
                                 return (
-                                    <Box className={classes.reviewBox}>
-
-                                        <Grid container spacing={1}>
-                                            <Grid item lg={7} md={7} sm={7} xs={7}>
-                                                <img src={data.image} alt="Logo" width="100%" style={{ maxWidth: "46px" }} />
-                                            </Grid>
-
-                                            <Grid item lg={4} md={4} sm={4} xs={4}>
-                                                <div style={{ display: "flex" }}>
+                                    <Box p={1}>
+                                        <Box className={classes.reviewCards}>
+                                            <Box className={classes.cardHeader} mb={2}>
+                                                <img src="/images/ProfileReview.png" alt="Logo" />
+                                                <Box>
                                                     {data?.star?.map((rating) => {
                                                         return (
-                                                            <Box >
-                                                                <StarIcon style={{ color: "#7EAFF8" }} />
-                                                            </Box>
+                                                            <StarIcon style={{ color: "#7EAFF8" }} />
                                                         )
                                                     })}
-                                                </div>
-                                            </Grid>
-                                            <Grid item lg={12} md={12}>
-                                                <Typography variant="h3" className={classes.reviewBoxTitle}>{data?.name}</Typography>
-                                            </Grid>
-                                            <Grid item lg={12} md={12}   >
-                                                <Typography variant="body1" className={classes.reviewBoxDescription}>{data?.description}</Typography>
-                                            </Grid>
-
-                                        </Grid>
+                                                </Box>
+                                            </Box>
+                                            <Box className={classes.cardBody}>
+                                                <Typography variant="h4">Floyd Miles</Typography>
+                                                <Typography variant="body1" className={classes.reviewBoxDescription}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</Typography>
+                                            </Box>
+                                        </Box>
                                     </Box>
-                                );
+                                )
                             })}
-                        {/*
-                        </Slider>
-                        
-                    */}
-
-                    </Box>
-
-
+                    </Slider>
                 </Box>
             </Container>
         </Box>
