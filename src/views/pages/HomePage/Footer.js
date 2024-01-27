@@ -4,7 +4,6 @@ import { Grid, Box, Typography, makeStyles, Button, Container } from "@material-
 const useStyles = makeStyles((theme) => ({
   bannerMainBox:{
     marginTop:"30px",
-    paddingBottom:"30px"
   },
   footer: {
     padding: '0',
@@ -39,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   subContent:{
     display:"flex",
     width:"248px",
-    margin:"10px 0px 0px 0px",
+    margin:"20px 0px 0px 0px",
       justifyContent:"space-between"
   },
 bannerTextBox:{
@@ -91,7 +90,9 @@ export default function Footer() {
         </Grid>
       </Grid>
       </Box>
+      
       </Container>
+      <img src="/images/AndorImage.png" alt="Logo" width="100%" />
     </Box>
   );
 }
