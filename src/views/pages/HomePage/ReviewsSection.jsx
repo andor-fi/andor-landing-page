@@ -6,8 +6,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import StarIcon from "@material-ui/icons/Star";
 
 const reviewData = [{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
-    // { image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
-    // {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
+    { image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+    {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
     // {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
     // {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
     // {image:"/images/ProfileReview.png",star:[1,2,3,4,5],name:"Floyd Miles",description:"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."},
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         border: "1px solid gray",
         borderRadius: "14px",
         padding: "18px 18px 28px 18px",
-        margin:"20px"
+        margin:"20px",
     },
     reviewBoxTitle: {
         fontSize: "18px !important",
@@ -55,35 +55,38 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const settings = {
-    dots: false,
-    slidesToShow: 7,
-    slidesToScroll: 2,
-    loop: false,
-    infinite: false,
-    arrows: false,
-    autoplay: false,
-    autoplaySpeed: 3000,
+    color:"white",
+    dots: true,
+  slidesToShow: 3,  // Adjust this based on the number of cards you want to show
+  slidesToScroll: 1,  // Adjust this based on the number of cards you want to scroll
+  infinite: false,
+  arrows: false,
+  autoplay: false,
+  autoplaySpeed: 3000,
     responsive: [
         {
-            breakpoint: 1025,
-            settings: {
-                slidesToShow: 4,
-            },
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
         },
         {
-            breakpoint: 800,
-            settings: {
-                slidesToShow: 5,
-            },
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
         },
         {
-            breakpoint: 450,
-            settings: {
-                slidesToShow: 3,
-            },
+          breakpoint: 450,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
         },
-    ],
-};
+      ],
+  };
 function ReviewsSection() {
     const classes = useStyles();
 
@@ -96,9 +99,9 @@ function ReviewsSection() {
                             <Typography variant="body1">User Feedbacks</Typography>
                             <Typography variant="h3" style={{ width: "100%", maxWidth: "90%" }}>Andor Fi has helped traders with its valuable features, making a significant impact in the industry.</Typography>
                         </Box>
+                        <Slider {...settings}>
 
                         {/*
-        <Slider {...settings}>
         */}
                         {reviewData &&
                             reviewData.map((data, i) => {
@@ -107,7 +110,7 @@ function ReviewsSection() {
                                     <Box className={classes.reviewBox}>
 
                                         <Grid container spacing={1}>
-                                            <Grid item lg={8} md={8} sm={8} xs={8}>
+                                            <Grid item lg={7} md={7} sm={7} xs={7}>
                                                 <img src={data.image} alt="Logo" width="100%" style={{ maxWidth: "46px" }} />
                                             </Grid>
 
@@ -135,8 +138,8 @@ function ReviewsSection() {
                             })}
                         {/*
                         
-                            </Slider>
-                        */}
+                    */}
+                    </Slider>
 
                     </Box>
 
