@@ -899,3 +899,19 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.slick-dots{
+  position: relative !important;
+}
+.slick-dots li{
+  background-color: #fff;
+  border-radius: 50%;
+}
+.slick-dots li.slick-active{
+background: linear-gradient(0deg,#7EAFF8, #5275F1, #5191F1);
+border-radius: 22px;
+    width: 50px;
+}
+.slick-dots li button{
+ display: none !important;
+}
