@@ -11,13 +11,14 @@ const reviewData = [{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5],
 { image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
 { image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
 { image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
+{ image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." },
 { image: "/images/ProfileReview.png", star: [1, 2, 3, 4, 5], name: "Floyd Miles", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet." }
 ]
 
 const useStyles = makeStyles((theme) => ({
 
     bannerMainBox: {
-        border: "1px solid #EBEEFF",
+        border: '1px solid rgb(235 238 255 / 15%)',
         padding: "60px",
         [theme.breakpoints.down('xs')]: {
             padding: "0px 10px",
