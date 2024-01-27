@@ -50,9 +50,7 @@ const ScrollBar = () => {
       {textArray.map((text, index) => (
         <div key={index} className={classes.textElement}>
         <img src="/images/marqee.png" alt="Logo"  />
-         <Typography variant='h1'>Why Andor Fi?</Typography>
-
-          {text}
+         <Typography variant='h1'>{text}</Typography>
         </div>
       ))}
         </Marquee>
