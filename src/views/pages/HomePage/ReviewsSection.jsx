@@ -86,6 +86,17 @@ const settings = {
           },
         },
       ],
+      customPaging: (i) => (
+        <div
+          style={{
+            width: '10px',
+            height: '10px',
+            backgroundColor: 'white', // Set your desired color
+            borderRadius: '50%',
+            cursor: 'pointer',
+          }}
+        />
+      ),
   };
 function ReviewsSection() {
     const classes = useStyles();
@@ -97,7 +108,7 @@ function ReviewsSection() {
                     <Box>
                         <Box style={{ textAlign: "center" }}>
                             <Typography variant="body1">User Feedbacks</Typography>
-                            <Typography variant="h3" style={{ width: "100%", maxWidth: "90%" }}>Andor Fi has helped traders with its valuable features, making a significant impact in the industry.</Typography>
+                            <Typography variant="h3" style={{ width: "100%", maxWidth: "100%" }}>Andor Fi has helped traders with its valuable features, making a significant impact in the industry.</Typography>
                         </Box>
                         <Slider {...settings}>
 
