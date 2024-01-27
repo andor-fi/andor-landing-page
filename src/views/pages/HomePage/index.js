@@ -8,6 +8,7 @@ import AndorMoileFeature from './AndorMoileFeature';
 import Protects from "./Protects"
 import YourJarvis from './YourJarvis';
 
+import InterFacesSection from './InterFacesSection';
 
 function index() {
   return (
@@ -15,10 +16,8 @@ function index() {
     <BannerSection/>   
     <PremiumFeature/>
     <WhyAndorFi/>
-    <AndorMoileFeature/>
-    <Protects/>
-    <YourJarvis/>
-    {/* <ReviewsSection/> */}
+    <InterFacesSection/>
+    <ReviewsSection/>
     <Footer/>
     </>
   )

@@ -87,16 +87,16 @@ const settings = {
         },
       ],
       customPaging: (i) => (
-        <div
-          style={{
-            width: '10px',
-            height: '10px',
-            backgroundColor: 'white', // Set your desired color
-            borderRadius: '50%',
-            cursor: 'pointer',
-          }}
-        />
-      ),
+    <div
+      style={{
+        width: '10px',
+        height: '10px',
+        backgroundColor: 'white', // Set your desired color
+        borderRadius: '50%',
+        cursor: 'pointer',
+      }}
+    />
+  ),
   };
 function ReviewsSection() {
     const classes = useStyles();
@@ -110,9 +110,9 @@ function ReviewsSection() {
                             <Typography variant="body1">User Feedbacks</Typography>
                             <Typography variant="h3" style={{ width: "100%", maxWidth: "100%" }}>Andor Fi has helped traders with its valuable features, making a significant impact in the industry.</Typography>
                         </Box>
-                        <Slider {...settings}>
-
+                        
                         {/*
+                        <Slider {...settings}>
         */}
                         {reviewData &&
                             reviewData.map((data, i) => {
@@ -148,9 +148,9 @@ function ReviewsSection() {
                                 );
                             })}
                         {/*
+                        </Slider>
                         
                     */}
-                    </Slider>
 
                     </Box>
 
