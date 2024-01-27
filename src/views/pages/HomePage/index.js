@@ -9,6 +9,7 @@ import Protects from "./Protects"
 import YourJarvis from './YourJarvis';
 
 import InterFacesSection from './InterFacesSection';
+import ScrollBar from './ScrollBar';
 
 function index() {
   return (
@@ -18,9 +19,11 @@ function index() {
     <WhyAndorFi/>
     <InterFacesSection/>
     <AndorMoileFeature/>
+    <ScrollBar/>
     <Protects/>
     <YourJarvis/>
     <ReviewsSection/>
+    <ScrollBar/>
     <Footer/>
     </>
   )

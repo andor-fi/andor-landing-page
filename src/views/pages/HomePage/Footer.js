@@ -3,7 +3,8 @@ import { Grid, Box, Typography, makeStyles, Button, Container } from "@material-
 
 const useStyles = makeStyles((theme) => ({
   bannerMainBox:{
-    marginTop:"30px"
+    marginTop:"30px",
+    paddingBottom:"30px"
   },
   footer: {
     padding: '0',
@@ -17,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
     lineHeight:"24px",
     fontWeight:"500",
     color:"#000000",
-    background:"#CED0DA"
+    background: "linear-gradient(-90deg,#B1B3ED,#CED0DA)",
+
 
   },
   textColor:{
