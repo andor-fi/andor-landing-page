@@ -2,7 +2,9 @@ import React from "react";
 import { Grid, Box, Typography, makeStyles, Button, Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-
+  bannerMainBox:{
+    marginTop:"30px"
+  },
   footer: {
     padding: '0',
     maxWidth:"65%"
