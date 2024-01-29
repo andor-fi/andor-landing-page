@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box, makeStyles, Typography, Button, Grid } from '@material-ui/core';
+import { Container, Box, makeStyles, Typography,  Grid } from '@material-ui/core';
 
 const interfaceArray = [{ image: "/images/InterfacesIcon1.png", title: "BETTER", shortDescription: "Multi-chain, you can buy, sell", description: "and transfer assets across different blockchain networks", description1: "With AI powered alpha scans, risk management, sniping and a suite of many other features, ANDOR becomes your ultimate trading arsenal." },
 { image: "/images/InterfacesIcon2.png", title: "FASTER", shortDescription: "Trade with just a chat command on the", description: "go. Works across multiple applications at the same time.", description1: "Trading with web3 wallets and exchanges is slow and clunky. Trading directly through your chat makes you faster than the market." },

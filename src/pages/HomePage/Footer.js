@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     margin:"0px 0px 20px 0px"
   },
   textColorFormate:{
-    color: "#fff !important",
     fontSize:"16px",
     lineHeight:"18px",
     fontWeight:"400",

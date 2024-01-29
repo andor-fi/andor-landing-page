@@ -9,34 +9,16 @@ import {
   MenuItem,
   Box,
   Container,
-  Menu,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import React, { useState, useEffect } from 'react'
 import Logo from './Logo'
-import { withStyles } from '@material-ui/core/styles'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
-const StyledMenu = withStyles((theme) => ({
- 
-}))((props) => (
-  <Menu
-    elevation={0}
-    getContentAnchorEl={null}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'center',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'center',
-    }}
-    {...props}
-  />
-))
+
 
 const headersData = [
   {
@@ -220,10 +202,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Header() {
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const handleClose1 = () => {
-    setAnchorEl(null)
-  }
+ 
   const {
     menuMobile,
     menuButton,
@@ -243,7 +222,6 @@ export default function Header() {
     mobileView: false,
     drawerOpen: false,
   })
-  const [applicationCheck, setApplicationCheck] = useState('')
   const { mobileView, drawerOpen } = state
 
   useEffect(() => {
@@ -257,15 +235,9 @@ export default function Header() {
 
     window.addEventListener('resize', () => setResponsiveness())
   }, [])
-  useEffect(() => {
-    setApplicationCheck(sessionStorage.getItem('token'))
-  }, [sessionStorage.getItem('token')])
+
 
   const [open, setOpen] = React.useState(false)
-
-  const handleClickOpen = () => {
-    setOpen(true)
-  }
 
   const handleClose = () => {
     setOpen(false)
@@ -435,26 +407,6 @@ export default function Header() {
           {mobileView ? displayMobile() : displayDesktop()}
         </Container>
       </AppBar>
-
-      <StyledMenu
-        id="customized-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose1}
-      >
-        {applicationCheck && (
-          <>
-            <div className="menutext">
-              <div >Dashboard</div>
-            </div>
-            <div className="menutext">
-              <div onClick={handleClickOpen}>Disconnect</div>
-            </div>
-          </>
-        )}
-      </StyledMenu>
-
       <Dialog
         open={open}
         fullWidth

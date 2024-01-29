@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, makeStyles, Typography, Grid } from '@material-ui/core';
+import { Container, Box, makeStyles, Typography } from '@material-ui/core';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

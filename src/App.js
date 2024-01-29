@@ -15,8 +15,6 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
       <Header />
-      {/*
-    */}
       <Index/>
       </ThemeProvider>
     </div>

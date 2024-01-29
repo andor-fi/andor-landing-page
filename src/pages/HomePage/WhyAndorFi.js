@@ -158,7 +158,7 @@ function WhyAndorFi() {
             <Container maxWidth="md" style={{ position: "relative" }}>
                 <Box className={classes.whyAndorFiMainBox} pt={5} pb={5} mt={5} mb={5}>
                     <Box textAlign={"center"} mt={4} mb={4}>
-                        <img src="../images/dollar-icon.png" />
+                        <img src="../images/dollar-icon.png" alt="andor fi" />
                         <Typography variant='h1'>Why Andor Fi?</Typography>
                     </Box>
                     <Grid container spacing={4}>
@@ -168,7 +168,7 @@ function WhyAndorFi() {
                                     <Box p={1}>
                                         <Box className={classes.sliderCards}>
                                             <Box className={classes.iconBox}>
-                                                <img src="../images/users.png" />
+                                                <img src="../images/users.png" alt="andor fi" />
                                             </Box>
                                             <Button className={classes.actionBtns}>Borrow</Button>
                                         </Box>
@@ -176,7 +176,7 @@ function WhyAndorFi() {
                                     <Box p={1}>
                                         <Box className={classes.tradSliderCards}>
                                             <Box className={classes.iconBox}>
-                                                <img src="../images/trade-icon.png" />
+                                                <img src="../images/trade-icon.png" alt="andor fi" />
                                             </Box>
                                             <Button variant="contained" style={{ minWidth: "110px", marginTop: "20px", }}>Trade</Button>
                                         </Box>
@@ -184,7 +184,7 @@ function WhyAndorFi() {
                                     <Box p={1}>
                                         <Box className={classes.tradSliderCards}>
                                             <Box className={classes.iconBox}>
-                                                <img src="../images/trade-icon.png" />
+                                                <img src="../images/trade-icon.png"  alt="andor fi"/>
                                             </Box>
                                             <Button variant="contained" style={{ minWidth: "110px", marginTop: "20px", }}>Repay</Button>
                                         </Box>
@@ -192,7 +192,7 @@ function WhyAndorFi() {
                                     <Box p={1}>
                                         <Box className={classes.sliderCards}>
                                             <Box className={classes.iconBox}>
-                                                <img src="../images/users.png" />
+                                                <img src="../images/users.png" alt="andor fi" />
                                             </Box>
                                             <Button className={classes.actionBtns}>Borrow</Button>
                                         </Box>
@@ -200,7 +200,7 @@ function WhyAndorFi() {
                                     <Box p={1}>
                                         <Box className={classes.tradSliderCards}>
                                             <Box className={classes.iconBox}>
-                                                <img src="../images/trade-icon.png" />
+                                                <img src="../images/trade-icon.png" alt="andor fi" />
                                             </Box>
                                             <Button variant="contained" style={{ minWidth: "110px", marginTop: "20px", }}>Trade</Button>
                                         </Box>
@@ -208,7 +208,7 @@ function WhyAndorFi() {
                                     <Box p={1}>
                                         <Box className={classes.tradSliderCards}>
                                             <Box className={classes.iconBox}>
-                                                <img src="../images/trade-icon.png" />
+                                                <img src="../images/trade-icon.png"  alt="andor fi"/>
                                             </Box>
                                             <Button variant="contained" style={{ minWidth: "110px", marginTop: "20px", }}>Repay</Button>
                                         </Box>
@@ -221,7 +221,7 @@ function WhyAndorFi() {
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={6}>
                             <Box className={classes.whyRightCard}>
-                                <img src="../images/why-andor-card.png" />
+                                <img src="../images/why-andor-card.png" alt="andor fi" />
                                 <Typography variant='h3'>2-way Profit Share</Typography>
                                 <Typography variant='body1'>Trade with your friends, and earn profits together</Typography>
                             </Box>
