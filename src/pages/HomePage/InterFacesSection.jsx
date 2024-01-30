@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box, makeStyles, Typography, Button, Grid } from '@material-ui/core';
+import { Container, Box, makeStyles, Typography,  Grid } from '@material-ui/core';
 
 const interfaceArray = [{ image: "/images/InterfacesIcon1.png", title: "BETTER", shortDescription: "Multi-chain, you can buy, sell", description: "and transfer assets across different blockchain networks", description1: "With AI powered alpha scans, risk management, sniping and a suite of many other features, ANDOR becomes your ultimate trading arsenal." },
 { image: "/images/InterfacesIcon2.png", title: "FASTER", shortDescription: "Trade with just a chat command on the", description: "go. Works across multiple applications at the same time.", description1: "Trading with web3 wallets and exchanges is slow and clunky. Trading directly through your chat makes you faster than the market." },
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     interface: {
         borderRadius: "20px",
         border: "1px solid rgb(235 238 255 / 15%)",
-        padding: "30px",
+        padding: "30px 60px 30px 30px",
         marginBottom: "90px",
         background: "linear-gradient(-90deg,#B1B3ED,#EBEEFF, #CED0DA)",
     },
@@ -50,7 +50,7 @@ const InterFacesSection = () => {
                     <Typography variant='h1'>Andor Fi is The IOS<br /> of Web3 Interfaces</Typography>
                 </Box>
                 <Box className={classes.interface}>
-                    <Grid container spacing={4}>
+                    <Grid container spacing={8}>
                         {interfaceArray?.map((interfaceData) => {
                             return (
                                 <Grid item lg={4} md={4} sm={12} xs={12} >

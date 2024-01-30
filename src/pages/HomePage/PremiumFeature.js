@@ -33,7 +33,7 @@ function PremiumFeature() {
             <Container maxWidth="md" style={{ position: "relative" }}>
                 <Box className={classes.premiumMainBox}>
                     <Box>
-                        <img src="../images/premium-card.png" width="100%" />
+                        <img src="../images/premium-card.png" alt="andor fi" width="100%" />
                     </Box>
                     <Box>
                         <Typography variant='body1' style={{marginBottom:"30px"}}>About Andor Fi</Typography>

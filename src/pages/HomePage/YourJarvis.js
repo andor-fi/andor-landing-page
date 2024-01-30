@@ -119,7 +119,7 @@ function YourJarvis() {
                             <Button className={classes.leftBtnBox4}>Risk Management</Button>
                         </Grid>
                         <Grid item xs={12} sm={4} md={4} lg={6}>
-                            <img src="../images/jarvis-image.png" width="100%" />
+                            <img src="../images/jarvis-image.png" alt="andor fi" width="100%" />
                         </Grid>
                         <Grid item xs={12} sm={4} md={4} lg={3} className={classes.gridItem2}>
                             <Button className={classes.leftBtnBox1}>Leverage</Button>

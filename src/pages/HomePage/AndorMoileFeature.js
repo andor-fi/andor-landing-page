@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box, makeStyles, Typography, Button, Grid } from '@material-ui/core';
+import { Container, Box, makeStyles, Typography, Grid } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -88,7 +88,7 @@ function AndorMoileFeature() {
     return (
         <Box className={classes.mainBox}>
             <Container maxWidth="md" style={{ position: "relative" }}>
-                <img src="../images/andor-mobile-feature.png" width="100%" />
+                <img src="../images/andor-mobile-feature.png" alt="andor fi" width="100%" />
                 <Box className={classes.featureMainBox}>
                     <Grid container justifyContent="space-between" spacing={4}>
                         <Grid item xs={12} sm={6} md={6} lg={6}>

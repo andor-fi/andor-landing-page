@@ -1,4 +1,6 @@
-export default {
+
+const typography = 
+ {
   h1: {
     fontWeight: 500,
     fontSize: 35,
@@ -65,3 +67,4 @@ export default {
     fontFamily: "'Space Grotesk', sans-serif",
   },
 };
+export default typography;

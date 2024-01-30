@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Box, makeStyles, Typography, Grid, Button } from '@material-ui/core';
+import { Container, Box, makeStyles, Typography} from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,7 +49,7 @@ function Protects() {
             <Container maxWidth="md">
                 <Box className={classes.protectsMainBox} pt={5} pb={5} mt={5} mb={5}>
                     <Box textAlign={"center"} mt={4} mb={4}>
-                        <img src="../images/head-icon.png" />
+                        <img src="../images/head-icon.png" alt="andor fi" />
                         <Typography variant='h1'>Andor Fi Protects</Typography>
                     </Box>
                     <Box className={classes.contentBox}>

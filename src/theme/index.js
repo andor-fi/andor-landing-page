@@ -344,7 +344,7 @@ const baseOptions = {
       },
       body: {
         color: "#fff",
-        background:"#000"
+        background:"black"
       },
       head: {
         color: "#878787 !important",

@@ -9,59 +9,17 @@ import {
   MenuItem,
   Box,
   Container,
-  Menu,
-  Grow,
-  Paper,
-  Popper,
-  MenuList,
-  // StyledMenu,
-  // StyledMenuItem,
 } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import React, { useState, useEffect, useRef } from 'react'
-import { Link, useHistory } from 'react-router-dom'
-import { FaUserCircle } from 'react-icons/fa'
-import { BiChevronDown } from 'react-icons/bi'
-import Logo from './../../component/Logo'
-import { withStyles } from '@material-ui/core/styles'
+import React, { useState, useEffect } from 'react'
+import Logo from './Logo'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
-const StyledMenu = withStyles((theme) => ({
-  paper: {
-    width: '188px !important',
-    background: theme.palette.background.dark1,
-    border: '1px solid #e1e1e1',
-    borderTop: '3px solid #5a86ff',
-    borderRadius: 0,
-  },
-}))((props) => (
-  <Menu
-    elevation={0}
-    getContentAnchorEl={null}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'center',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'center',
-    }}
-    {...props}
-  />
-))
-const StyledMenuItem = withStyles((theme) => ({
-  root: {
-    // "&:focus": {
-    //   backgroundColor: theme.palette.primary.main,
-    //   "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
-    //     color: theme.palette.common.white,
-    //   },
-    // },
-  },
-}))(MenuItem)
+
+
 const headersData = [
   {
     label: 'Home',
@@ -146,11 +104,6 @@ const useStyles = makeStyles((theme) => ({
       height: '100%',
     },
   },
-  maindrawer: {
-    height: '100%',
-    background: '#0c0731',
-    width: '260px',
-  },
   logoDrawer: {
     paddingLeft: '10px',
     width: '80px',
@@ -198,23 +151,6 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
     },
   },
-  menuMobile2: {
-    fontSize: '14px',
-    fontWeight: '400',
-    fontStyle: 'normal',
-    letterSpacing: '-0.6px',
-    lineHeight: '1.75',
-    color: '#fff',
-    padding: '10px 5px !important',
-    '@media (max-width: 500px)': {
-      padding: '7px 0',
-      width: '100%',
-    },
-  },
-  paper1: {
-    background: 'black',
-    color: 'white',
-  },
   containerHeight: {
     height: '100%',
     background: theme.palette.background.dark1,
@@ -229,77 +165,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     backgroundColor: '#transparent',
     alignItems: 'center',
-  },
-  search: {
-    height: '31px',
-    position: 'relative',
-    color: '#ABABAB',
-    borderRadius: '100px',
-    backgroundColor: '#E6E6E6',
-    border: '1px solid #fff',
-    '&:hover': {
-      backgroundColor: '#ececec',
-      border: '1px solid #300760',
-    },
-    marginLeft: 20,
-    width: '140px',
-    maxWidth: '257px',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
-      width: '180px',
-    },
-  },
-  searchIcon: {
-    fontSize: '16px',
-    padding: theme.spacing(0, 2),
-    color: '#000000',
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  inputRoot: {
-    color: 'inherit',
-    fontSize: '16px',
-  },
-  wallet: {
-    fontSize: '14px',
-    fontWeight: '400',
-    fontStyle: 'normal',
-    lineHeight: '21px',
-    color: '#fff',
-    border: '1px solid #ec0066',
-    padding: '0 15px',
-    background: '#ec0066',
-    borderRadius: '50px',
-    height: '31px',
-    '&:hover': {
-      background: '#fff',
-      color: '#ec0066',
-    },
-    '@media (max-width: 900px)': {
-      marginLeft: '12px',
-      marginTop: '12px',
-    },
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    fontSize: '13px',
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100px',
-    [theme.breakpoints.up('sm')]: {
-      width: '100%',
-      '&:focus': {
-        width: '100%',
-      },
-    },
-  },
-  submenu: {
-    borderTop: '3px solid #300760',
-    top: '25px !important',
   },
   logoBox: {
     height: '100%',
@@ -334,22 +199,10 @@ const useStyles = makeStyles((theme) => ({
       // },
     },
   },
-  desktopbtn: {
-    color: theme.palette.text.black,
-  },
-  navcolor: {
-    color: theme.palette.text.black,
-  },
 }))
 
 export default function Header() {
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const handleClose1 = () => {
-    setAnchorEl(null)
-  }
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
+ 
   const {
     menuMobile,
     menuButton,
@@ -361,21 +214,14 @@ export default function Header() {
     drawericon,
     logoDrawer,
     containerHeight,
-    mainHeader,
-    wallet,
-    menuMobile2,
-    submenu,
-    desktopbtn,
-    navcolor,
+    mainHeader
   } = useStyles()
-  const history = useHistory()
-  console.log(history.location)
+  
 
   const [state, setState] = useState({
     mobileView: false,
     drawerOpen: false,
   })
-  const [applicationCheck, setApplicationCheck] = useState('')
   const { mobileView, drawerOpen } = state
 
   useEffect(() => {
@@ -390,54 +236,12 @@ export default function Header() {
     window.addEventListener('resize', () => setResponsiveness())
   }, [])
 
-  const [open1, setOpen1] = useState({ community: false, user: false })
-  const anchorRef = { community: useRef(null), user: useRef(null) }
-
-  useEffect(() => {
-    setApplicationCheck(sessionStorage.getItem('token'))
-  }, [sessionStorage.getItem('token')])
-
-  // const handleToggle = (name) => {
-  //   setOpen1({ ...open1, [name]: !open1[name] });
-  // };
-
-  const handleClose2 = (event, name) => {
-    if (
-      anchorRef[name].current &&
-      anchorRef[name].current.contains(event.target)
-    ) {
-      return
-    }
-
-    setOpen1({ ...open1, [name]: false })
-  }
-
-  function handleListKeyDown(event, name) {
-    if (event.key === 'Tab') {
-      event.preventDefault()
-      setOpen1({ ...open1, [name]: false })
-    }
-  }
 
   const [open, setOpen] = React.useState(false)
-
-  const handleClickOpen = () => {
-    setOpen(true)
-  }
 
   const handleClose = () => {
     setOpen(false)
   }
-
-  // return focus to the button when we transitioned from !open -> open
-  // const prevOpen = React.useRef(open1);
-  // React.useEffect(() => {
-  //   if (prevOpen.current === true && open1 === false) {
-  //     anchorRef.current.focus();
-  //   }
-
-  //   prevOpen.current = open1;
-  // }, [open1]);
 
   const displayDesktop = () => {
     return (
@@ -455,7 +259,7 @@ export default function Header() {
               {getMenuButtons()}
             </Grid>
             <Grid item xs={2} style={{ height: '100%' }}>
-              {signin}
+              {tryNowButton}
             </Grid>
           </Grid>
         </Toolbar>
@@ -481,7 +285,7 @@ export default function Header() {
           <div className={drawerContainer}>
             <img className={logoDrawer} src="images/logo.png" alt="" />
             {getDrawerChoices()}
-            {signin}
+            {tryNowButton}
           </div>
         </Drawer>
 
@@ -523,7 +327,7 @@ export default function Header() {
               key: label,
               color: 'inherit',
               to: href,
-              component: Link,
+              // component: Link,
               className: menuButton1,
             }}
           >
@@ -542,7 +346,7 @@ export default function Header() {
               key: label,
               color: 'inherit',
               to: href,
-              component: Link,
+              // component: Link,
               className: menuButton1,
             }}
           >
@@ -555,24 +359,17 @@ export default function Header() {
 
   const femmecubatorLogo = (
     <Box className={logoBox}>
-      <Link to="/" style={{textDecoration:"none"}}>
-        <Logo className="logoImg" />
-      </Link>
+    <Logo className="logoImg" />
+      
     </Box>
   )
 
-  const signin = (
+  const tryNowButton = (
     <Box className={signinBox}>
       <Button
-        // aria-controls="simple-menu"
-        // aria-haspopup="true"
-        // onClick={handleClick}
         variant="contained"
       >
         Try Now
-        {/* <FaUserCircle style={{ fontSize: '25px', marginRight: '10px' }} />{' '}
-        {!applicationCheck ? 'Sign In' : ''}
-        <BiChevronDown /> */}
       </Button>
     </Box>
   )
@@ -586,7 +383,7 @@ export default function Header() {
               key: label,
               color: 'inherit',
               to: href,
-              component: Link,
+              // component: Link,
               className: menuButton,
             }}
           >
@@ -600,41 +397,16 @@ export default function Header() {
   return (
     <>
       <AppBar
-        position={history.location.pathname !== '/' ? 'relative' : 'relative'}
+        position={'relative'}
         elevation={0}
       >
         <Container
-          maxWidth={history.location.pathname !== '/' ? 'fixed' : 'fixed'}
+          maxWidth={'fixed'}
           className={containerHeight}
         >
           {mobileView ? displayMobile() : displayDesktop()}
         </Container>
       </AppBar>
-
-      <StyledMenu
-        id="customized-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose1}
-      >
-        {applicationCheck && (
-          <>
-            <StyledMenuItem className="menutext">
-              <Link to="/dashboard">Dashboard</Link>
-            </StyledMenuItem>
-            <StyledMenuItem className="menutext">
-              <Link onClick={handleClickOpen}>Disconnect</Link>
-            </StyledMenuItem>
-          </>
-        )}
-        {!applicationCheck && (
-          <StyledMenuItem className="menutext">
-            <Link to="/login">Login</Link>
-          </StyledMenuItem>
-        )}
-      </StyledMenu>
-
       <Dialog
         open={open}
         fullWidth
@@ -656,9 +428,6 @@ export default function Header() {
         <DialogActions>
           <Button
             onClick={() => {
-              history.push('/')
-              window.sessionStorage.removeItem('token')
-              window.sessionStorage.removeItem('userType')
               setOpen(false)
             }}
             color="primary"
