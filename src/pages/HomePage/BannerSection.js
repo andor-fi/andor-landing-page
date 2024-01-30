@@ -19,9 +19,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     width: "100%",
     flexWrap:"wrap",
-    [theme.breakpoints.down("xs")]:{
-        top:"58%"
-    }
+    // [theme.breakpoints.down("xs")]:{
+    //     top:"58%"
+    // }
   },
 }));
 

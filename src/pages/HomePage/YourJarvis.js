@@ -6,11 +6,11 @@ const useStyles = makeStyles((theme) => ({
 
     jarvisMainBox: {
         "& h1": {
-            "background": "linear-gradient(#CED0DA, #B1B3ED)",
-            "WebkitBackgroundClip": "text",
-            "color": "transparent",
-            marginTop: "-10px",
-            marginBottom: "-10px",
+            background: "linear-gradient(#CED0DA, #B1B3ED)",
+            WebkitBackgroundClip: "text",
+            color: "transparent",
+            // marginTop: "-10px",
+            // marginBottom: "-10px",
             [theme.breakpoints.up('sm')]: {
                 fontSize: "54px",
                 lineHeight: "64px",

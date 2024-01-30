@@ -64,6 +64,10 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       borderBottom: '5px solid #5a86ff',
     },
+    "& a":{
+      textDecoration:"none",
+      color:"inherit"
+    }
   },
   toolbar: {
     padding: '0',
@@ -217,6 +221,17 @@ export default function Header() {
     containerHeight,
     mainHeader
   } = useStyles()
+
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+};
+
+// console.log("ScrollTop ::",scrollPosition);
+
+
   
 
   const [state, setState] = useState({
@@ -236,6 +251,14 @@ export default function Header() {
 
     window.addEventListener('resize', () => setResponsiveness())
   }, [])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
 
 
   const [open, setOpen] = React.useState(false)
@@ -284,7 +307,8 @@ export default function Header() {
           }}
         >
           <div className={drawerContainer}>
-            <img className={logoDrawer} src="images/logo.png" alt="" />
+            {/* <img className={logoDrawer} src="images/logo.png" alt="" /> */}
+            <Logo className="logoImg" />
             {getDrawerChoices()}
             {tryNowButton}
           </div>
@@ -401,8 +425,10 @@ export default function Header() {
   return (
     <>
       <AppBar
-        position={'relative'}
+        position={scrollPosition>=2?'sticky':"relative"}
         elevation={0}
+        style={scrollPosition>=2 ? {background:"#000",top:"0px"} : {background:"transparent"}}
+        // style={{scrollPosition>=20?'sticky':"relative"}}}
       >
         <Container
           maxWidth={'fixed'}
