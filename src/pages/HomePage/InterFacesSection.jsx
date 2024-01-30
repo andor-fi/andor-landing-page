@@ -44,7 +44,7 @@ const InterFacesSection = () => {
     const classes = useStyles();
 
     return (
-        <div>
+        <div id="aboutList">
             <Container maxWidth="lg" style={{ position: "relative" }}>
                 <Box textAlign={"center"} mt={4} mb={4} className={classes.interfaceHeader}>
                     <Typography variant='h1'>Andor Fi is The IOS<br /> of Web3 Interfaces</Typography>

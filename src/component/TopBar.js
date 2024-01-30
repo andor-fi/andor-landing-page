@@ -20,28 +20,7 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 
 
-const headersData = [
-  {
-    label: 'Home',
-    href: '/',
-    class:"homeList"
-  },
-  {
-    label: 'About Andor-Fi',
-    href: '/about',
-    class:"aboutList"
-  },
-  {
-    label: 'Why us?',
-    href: '/why us',
-    class:"whyUsList"
-  },
-  {
-    label: 'Features',
-    href: '/feature',
-    class:"FeaturesList"
-  },
-]
+
 
 const headersData2 = [
   {
@@ -202,6 +181,28 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Header() {
+  const headersData = [
+    {
+      label: 'Home',
+      href: '#homelist',
+      class:"homeList"
+    },
+    {
+      label: 'About Andor-Fi',
+      href: '#aboutList',
+      class:"aboutList"
+    },
+    {
+      label: 'Why us?',
+      href: '#whyUsList',
+      class:"whyUsList"
+    },
+    {
+      label: 'Features',
+      href: '#feature',
+      class:"FeaturesList"
+    },
+  ]
  
   const {
     menuMobile,
@@ -387,7 +388,10 @@ export default function Header() {
               className: menuButton,
             }}
           >
-            {label}
+          <a href={href} className="menuButton">
+          {label}
+              </a>
+            
           </Button>
         </>
       )
