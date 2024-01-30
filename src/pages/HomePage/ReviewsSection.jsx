@@ -26,9 +26,10 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     reviewCards: {
-        border: "1px solid gray",
+        border: "1px solid rgb(235 238 255 / 15%)",
         padding: "13px",
         borderRadius: "9px",
+        margin:"10px"
     },
     cardHeader: {
         display: "flex",
