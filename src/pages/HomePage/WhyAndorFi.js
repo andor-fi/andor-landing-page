@@ -45,17 +45,33 @@ const useStyles = makeStyles((theme) => ({
         "& img": {
             width: "100%",
             height: "auto"
+        },   
+        "& .sliderCards": {
+            background: "transparent",
+            border: "2px solid #7EAFF8",
+            width: "85%",
+            height: "170px",
+            borderRadius: "14px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
         },
-    },
-    sliderCards: {
-        background: "linear-gradient(-90deg, #5275F1, #5191F1,#7EAFF8)",
-        width: "170px",
-        height: "170px",
-        borderRadius: "14px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column"
+        "& .actionBtns": {
+            marginTop: "20px",
+            minWidth: "110px"
+        },
+        "& .slick-current":{
+            "& .sliderCards":{
+                background: "linear-gradient(-90deg, #5275F1, #5191F1,#7EAFF8)",
+                "& .actionBtns": {
+                    background: "linear-gradient(-90deg, #FFFFFF, #B1B3ED)",
+                    borderRadius: "9px",
+                    color:"#000",
+                    border:"none"
+                },
+            },
+        }
     },
     iconBox: {
         width: "60px",
@@ -69,27 +85,6 @@ const useStyles = makeStyles((theme) => ({
             width: "auto",
             height: "auto",
         }
-    },
-    actionBtns: {
-        background: "linear-gradient(-90deg, #FFFFFF, #B1B3ED)",
-        marginTop: "20px",
-        borderRadius: "9px",
-        minWidth: "110px"
-    },
-    cardSlider: {
-        display: "flex",
-        justifyContent: "center",
-    },
-    tradSliderCards: {
-        background: "transparent",
-        border: "2px solid #7EAFF8",
-        width: "170px",
-        height: "170px",
-        borderRadius: "14px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
     },
     heading:{
         "background": "linear-gradient(#CED0DA, #B1B3ED)",
@@ -166,51 +161,51 @@ function WhyAndorFi() {
                             <Box className={classes.whyLeftCard}>
                                 <Slider {...settings}>
                                     <Box p={1}>
-                                        <Box className={classes.sliderCards}>
+                                        <Box className="sliderCards">
                                             <Box className={classes.iconBox}>
                                                 <img src="../images/users.png" alt="andor fi" />
                                             </Box>
-                                            <Button className={classes.actionBtns}>Borrow</Button>
+                                            <Button variant="contained" className="actionBtns">Borrow</Button>
                                         </Box>
                                     </Box>
                                     <Box p={1}>
-                                        <Box className={classes.tradSliderCards}>
+                                        <Box className="sliderCards">
                                             <Box className={classes.iconBox}>
                                                 <img src="../images/trade-icon.png" alt="andor fi" />
                                             </Box>
-                                            <Button variant="contained" style={{ minWidth: "110px", marginTop: "20px", }}>Trade</Button>
+                                            <Button variant="contained" className="actionBtns">Trade</Button>
                                         </Box>
                                     </Box>
                                     <Box p={1}>
-                                        <Box className={classes.tradSliderCards}>
+                                        <Box className="sliderCards">
                                             <Box className={classes.iconBox}>
-                                                <img src="../images/trade-icon.png"  alt="andor fi"/>
+                                                <img src="../images/repay-icon.png"  alt="andor fi"/>
                                             </Box>
-                                            <Button variant="contained" style={{ minWidth: "110px", marginTop: "20px", }}>Repay</Button>
+                                            <Button variant="contained" className="actionBtns">Repay</Button>
                                         </Box>
                                     </Box>
                                     <Box p={1}>
-                                        <Box className={classes.sliderCards}>
+                                        <Box className="sliderCards">
                                             <Box className={classes.iconBox}>
                                                 <img src="../images/users.png" alt="andor fi" />
                                             </Box>
-                                            <Button className={classes.actionBtns}>Borrow</Button>
+                                            <Button variant="contained" className="actionBtns">Borrow</Button>
                                         </Box>
                                     </Box>
                                     <Box p={1}>
-                                        <Box className={classes.tradSliderCards}>
+                                        <Box className="sliderCards">
                                             <Box className={classes.iconBox}>
                                                 <img src="../images/trade-icon.png" alt="andor fi" />
                                             </Box>
-                                            <Button variant="contained" style={{ minWidth: "110px", marginTop: "20px", }}>Trade</Button>
+                                            <Button variant="contained" className="actionBtns">Trade</Button>
                                         </Box>
                                     </Box>
                                     <Box p={1}>
-                                        <Box className={classes.tradSliderCards}>
+                                        <Box className="sliderCards">
                                             <Box className={classes.iconBox}>
-                                                <img src="../images/trade-icon.png"  alt="andor fi"/>
+                                                <img src="../images/repay-icon.png"  alt="andor fi"/>
                                             </Box>
-                                            <Button variant="contained" style={{ minWidth: "110px", marginTop: "20px", }}>Repay</Button>
+                                            <Button variant="contained" className="actionBtns">Repay</Button>
                                         </Box>
                                     </Box>
                                 </Slider>
