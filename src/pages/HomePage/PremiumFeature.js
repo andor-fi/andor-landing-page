@@ -29,7 +29,7 @@ function PremiumFeature() {
     const classes = useStyles();
 
     return (
-        <Box>
+        <Box id="features">
             <Container maxWidth="md" style={{ position: "relative" }}>
                 <Box className={classes.premiumMainBox}>
                     <Box>
