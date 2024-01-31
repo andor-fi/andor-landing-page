@@ -6,7 +6,6 @@ import {
   IconButton,
   Drawer,
   Grid,
-  MenuItem,
   Box,
   Container,
 } from '@material-ui/core'
@@ -20,28 +19,7 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 
 
-const headersData = [
-  {
-    label: 'Home',
-    href: '/',
-    class:"homeList"
-  },
-  {
-    label: 'About Andor-Fi',
-    href: '/about',
-    class:"aboutList"
-  },
-  {
-    label: 'Why us?',
-    href: '/why us',
-    class:"whyUsList"
-  },
-  {
-    label: 'Features',
-    href: '/feature',
-    class:"FeaturesList"
-  },
-]
+
 
 const headersData2 = [
   {
@@ -85,6 +63,12 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       borderBottom: '5px solid #5a86ff',
     },
+    "& a":{
+      textDecoration:"none",
+      color:"inherit"
+    }
+  },activeLinks:{
+    borderBottom: '5px solid #5a86ff',
   },
   toolbar: {
     padding: '0',
@@ -144,11 +128,24 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '-0.6px',
     lineHeight: '1.75',
     color: '#fff',
+    textDecoration:"none",
+
     // borderBottom: "1px solid #3e3e3e",
     padding: '16px',
     '@media (max-width: 500px)': {
       padding: '7px 0',
       width: '100%',
+    },
+    "& a":{
+      textDecoration:"none",
+      color:"inherit"
+    },
+    '&:active': {
+      borderBottom: '5px solid #5a86ff',
+    },
+    '&:hover': {
+      borderBottom: '5px solid #5a86ff',
+      background:"transparent"
     },
   },
   containerHeight: {
@@ -184,6 +181,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       borderLeft: ' none',
     },
+    "& a":{
+      textDecoration:"none",
+      color:"inherit"
+    },
     '& button': {
       // width: '100%',
       height: '100%',
@@ -202,20 +203,55 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Header() {
+  const headersData = [
+    {
+      label: 'Home',
+      href: '#homepage',
+      class:"homeList"
+    },
+    {
+      label: 'About Andor-Fi',
+      href: '#aboutandor',
+      class:"aboutList"
+    },
+    {
+      label: 'Why us?',
+      href: '#whyUsList',
+      class:"whyUsList"
+    },
+    {
+      label: 'Features',
+      href: '#feature',
+      class:"FeaturesList"
+    },
+  ]
  
   const {
     menuMobile,
-    menuButton,
+    menuButton,activeLinks,
     menuButton1,
     logoBox,
     signinBox,
     toolbar,
     drawerContainer,
     drawericon,
-    logoDrawer,
     containerHeight,
     mainHeader
   } = useStyles()
+
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [activeLink, setActiveLink] = useState('homepage');
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+};
+
+
+
   
 
   const [state, setState] = useState({
@@ -235,6 +271,14 @@ export default function Header() {
 
     window.addEventListener('resize', () => setResponsiveness())
   }, [])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
 
 
   const [open, setOpen] = React.useState(false)
@@ -283,7 +327,8 @@ export default function Header() {
           }}
         >
           <div className={drawerContainer}>
-            <img className={logoDrawer} src="images/logo.png" alt="" />
+            {/* <img className={logoDrawer} src="images/logo.png" alt="" /> */}
+            <Logo className="logoImg" />
             {getDrawerChoices()}
             {tryNowButton}
           </div>
@@ -331,7 +376,9 @@ export default function Header() {
               className: menuButton1,
             }}
           >
-            <MenuItem className={menuMobile}>{label}</MenuItem>
+            <a href={href} className={menuMobile}>
+            {label}
+                </a>
           </Button>
         </>
       )
@@ -369,7 +416,9 @@ export default function Header() {
       <Button
         variant="contained"
       >
-        Try Now
+      <a href="https://t.me/projectstartrek_bot" target="_blank" rel="noopener noreferrer">Try Now</a>
+
+        
       </Button>
     </Box>
   )
@@ -387,7 +436,11 @@ export default function Header() {
               className: menuButton,
             }}
           >
-            {label}
+          
+          <a href={href} className={`${activeLink === href ? activeLinks : ''}`} onClick={() => handleLinkClick(href)}>
+          {label}
+              </a>
+            
           </Button>
         </>
       )
@@ -397,8 +450,10 @@ export default function Header() {
   return (
     <>
       <AppBar
-        position={'relative'}
+        position={scrollPosition>=2?'sticky':"relative"}
         elevation={0}
+        style={scrollPosition>=2 ? {background:"#000",top:"0px"} : {background:"transparent"}}
+        // style={{scrollPosition>=20?'sticky':"relative"}}}
       >
         <Container
           maxWidth={'fixed'}

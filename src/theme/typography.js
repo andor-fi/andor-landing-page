@@ -8,9 +8,9 @@ const typography =
     "background": "linear-gradient(#CED0DA, #B1B3ED)",
     "WebkitBackgroundClip": "text",
     "color": "transparent",
-    "@media(max-width:767px)": {
-      fontSize: "20px",
-    },
+    // "@media(max-width:767px)": {
+    //   fontSize: "20px",
+    // },
   },
 
   h2: {
