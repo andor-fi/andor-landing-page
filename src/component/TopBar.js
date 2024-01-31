@@ -180,7 +180,6 @@ const useStyles = makeStyles((theme) => ({
     // borderLeft: ' 1px solid #e1e1e1',
     [theme.breakpoints.down('md')]: {
       borderLeft: ' none',
-      marginLeft:"20px"
     },
     "& a":{
       textDecoration:"none",
