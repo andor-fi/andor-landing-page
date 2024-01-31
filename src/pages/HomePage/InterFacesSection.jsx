@@ -80,7 +80,7 @@ const InterFacesSection = () => {
   const classes = useStyles();
 
   return (
-    <Box id="aboutList" className={classes.mainInterFaceBox}>
+    <Box  className={classes.mainInterFaceBox}>
       <Container maxWidth="lg">
         <Box
           textAlign={"center"}

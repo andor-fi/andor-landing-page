@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "500",
     color: "#000000",
     background: "linear-gradient(-90deg,#B1B3ED,#CED0DA)",
+    "& a":{
+      textDecoration:"none",
+      color:"inherit"
+    },
   },
   textColor: {
     color: "#fff !important",
@@ -59,7 +63,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer() {
   const {
-    footer,
     footerButtonIcon,
     textColor,
     textColorFormate,
@@ -84,27 +87,34 @@ export default function Footer() {
             </Grid>
             <Grid item lg={4} md={4} sm={6} xs={12}>
               <Button variant="contained" className={footerButtonIcon}>
-                Try Andor Fi
+            <a href="https://t.me/projectstartrek_bot" target="_blank" rel="noopener noreferrer">Try Andor Fi</a>
               </Button>
               <Box className={subContent}>
+               
+                <a href="https://twitter.com/Andor_Fi" target="_blank" rel="noopener noreferrer">
                 <img
-                  src="/images/Social.png"
-                  alt="Logo"
-                  width="100%"
-                  style={{ maxWidth: "56px" }}
-                />
+                src="/images/Social.png"
+                alt="Logo"
+                width="100%"
+                style={{ maxWidth: "56px" }}
+              />
+                </a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/images/Linkdin.png"
                   alt="Logo"
                   width="100%"
                   style={{ maxWidth: "56px" }}
                 />
+                </a>
+                <a href="https://discord.gg/4zE5Cu6J" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/images/Decord.png"
                   alt="Logo"
                   width="100%"
                   style={{ maxWidth: "56px" }}
                 />
+                </a>
               </Box>
             </Grid>
           </Grid>

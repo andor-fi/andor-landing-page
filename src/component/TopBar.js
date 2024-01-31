@@ -6,7 +6,6 @@ import {
   IconButton,
   Drawer,
   Grid,
-  MenuItem,
   Box,
   Container,
 } from '@material-ui/core'
@@ -127,11 +126,24 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '-0.6px',
     lineHeight: '1.75',
     color: '#fff',
+    textDecoration:"none",
+
     // borderBottom: "1px solid #3e3e3e",
     padding: '16px',
     '@media (max-width: 500px)': {
       padding: '7px 0',
       width: '100%',
+    },
+    "& a":{
+      textDecoration:"none",
+      color:"inherit"
+    },
+    '&:active': {
+      borderBottom: '5px solid #5a86ff',
+    },
+    '&:hover': {
+      borderBottom: '5px solid #5a86ff',
+      background:"transparent"
     },
   },
   containerHeight: {
@@ -166,6 +178,11 @@ const useStyles = makeStyles((theme) => ({
     // borderLeft: ' 1px solid #e1e1e1',
     [theme.breakpoints.down('md')]: {
       borderLeft: ' none',
+      marginLeft:"20px"
+    },
+    "& a":{
+      textDecoration:"none",
+      color:"inherit"
     },
     '& button': {
       // width: '100%',
@@ -188,12 +205,12 @@ export default function Header() {
   const headersData = [
     {
       label: 'Home',
-      href: '#homelist',
+      href: '#homepage',
       class:"homeList"
     },
     {
       label: 'About Andor-Fi',
-      href: '#aboutList',
+      href: '#aboutandor',
       class:"aboutList"
     },
     {
@@ -217,7 +234,6 @@ export default function Header() {
     toolbar,
     drawerContainer,
     drawericon,
-    logoDrawer,
     containerHeight,
     mainHeader
   } = useStyles()
@@ -356,7 +372,9 @@ const handleScroll = () => {
               className: menuButton1,
             }}
           >
-            <MenuItem className={menuMobile}>{label}</MenuItem>
+            <a href={href} className={menuMobile}>
+            {label}
+                </a>
           </Button>
         </>
       )
@@ -394,7 +412,9 @@ const handleScroll = () => {
       <Button
         variant="contained"
       >
-        Try Now
+      <a href="https://t.me/projectstartrek_bot" target="_blank" rel="noopener noreferrer">Try Now</a>
+
+        
       </Button>
     </Box>
   )

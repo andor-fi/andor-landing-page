@@ -29,7 +29,7 @@ function BannerSection() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.bannerMainBox}>
+    <Box className={classes.bannerMainBox} id="homepage">
       <Container maxWidth="md">
         <Box style={{ position: "relative" }}>
             <Box className={classes.bannerTextBox}>

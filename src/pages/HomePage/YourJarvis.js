@@ -71,7 +71,11 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         maxWidth: "315px",
         fontFamily: "'Poppins', sans-serif",
-        fontWeight: "500"
+        fontWeight: "500",
+        "& a":{
+            textDecoration:"none",
+            color:"inherit"
+          },
     },
     gridContainer: {
         [theme.breakpoints.down('xs')]: {
@@ -133,7 +137,9 @@ function YourJarvis() {
                     <Box textAlign={"center"} mt={5}>
                         <Typography variant="h3">How it Works?</Typography>
                         <Typography variant="body1" style={{ margin: "0px auto", maxWidth: "375px" }} className={classes.heading}>Andor-Fi, your cryptocurrency trading Jarvis, empowers you with commands like buying, selling, sniping, mirror settings, stop loss, and comprehensive data access.</Typography>
-                        <Button className={classes.tryOutBtn}>Try Out</Button>
+                        <Button className={classes.tryOutBtn}>
+            <a href="https://t.me/projectstartrek_bot" target="_blank" rel="noopener noreferrer">Try Out</a>
+                        </Button>
                     </Box>
                 </Box>
             </Container>
