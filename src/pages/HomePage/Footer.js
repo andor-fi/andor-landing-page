@@ -99,7 +99,7 @@ export default function Footer() {
                 style={{ maxWidth: "56px" }}
               />
                 </a>
-                <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                <a href=" https://www.linkedin.com/company/andor-fi" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/images/Linkdin.png"
                   alt="Logo"
@@ -107,7 +107,7 @@ export default function Footer() {
                   style={{ maxWidth: "56px" }}
                 />
                 </a>
-                <a href="https://discord.gg/4zE5Cu6J" target="_blank" rel="noopener noreferrer">
+                <a href="https://discord.gg/SjS4gzSe" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/images/Decord.png"
                   alt="Logo"

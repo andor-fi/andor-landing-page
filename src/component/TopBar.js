@@ -67,6 +67,8 @@ const useStyles = makeStyles((theme) => ({
       textDecoration:"none",
       color:"inherit"
     }
+  },activeLinks:{
+    borderBottom: '5px solid #5a86ff',
   },
   toolbar: {
     padding: '0',
@@ -227,7 +229,7 @@ export default function Header() {
  
   const {
     menuMobile,
-    menuButton,
+    menuButton,activeLinks,
     menuButton1,
     logoBox,
     signinBox,
@@ -240,12 +242,15 @@ export default function Header() {
 
 
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [activeLink, setActiveLink] = useState('homepage');
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
 const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
 };
 
-// console.log("ScrollTop ::",scrollPosition);
 
 
   
@@ -432,7 +437,8 @@ const handleScroll = () => {
               className: menuButton,
             }}
           >
-          <a href={href} className="menuButton">
+          
+          <a href={href} className={`${activeLink === href ? activeLinks : ''}`} onClick={() => handleLinkClick(href)}>
           {label}
               </a>
             
