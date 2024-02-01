@@ -82,7 +82,8 @@ const InterFacesSection = () => {
   const classes = useStyles();
   const isMobileScreen = useMediaQuery('(max-width: 600px)'); // Adjust the max-width as needed
 
-  const spacing = isMobileScreen ? 8 : 5;
+  const marginGrid = isMobileScreen ?  "20px": "";
+  
   return (
     <Box  className={classes.mainInterFaceBox}>
       <Container maxWidth="lg">
@@ -96,10 +97,10 @@ const InterFacesSection = () => {
             <br /> of Web3 Interfaces
           </Typography>
         </Box>
-          <Grid container spacing={spacing} className={classes.gridBox}>
+          <Grid container spacing={5} className={classes.gridBox}>
             {interfaceArray?.map((interfaceData) => {
               return (
-                <Grid item lg={4} md={4} sm={12} xs={12}>
+                <Grid item lg={4} md={4} sm={12} xs={12} style={{marginBottom:marginGrid}}>
                   <Box className={classes.interfaceCard}>
                     <img
                       src={interfaceData?.image}
