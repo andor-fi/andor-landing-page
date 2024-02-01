@@ -104,6 +104,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
   },
+  tryNowbutton:{
+    margin:"18px 0px 0px 0px"
+  },
   drawericon: {
     color: '#fff',
     position: 'absolute',
@@ -234,6 +237,7 @@ export default function Header() {
     signinBox,
     toolbar,
     drawerContainer,
+    tryNowbutton,
     drawericon,
     containerHeight,
     mainHeader
@@ -330,7 +334,9 @@ const handleScroll = () => {
             {/* <img className={logoDrawer} src="images/logo.png" alt="" /> */}
             <Logo className="logoImg" />
             {getDrawerChoices()}
+            <div className={tryNowbutton}>
             {tryNowButton}
+            </div>
           </div>
         </Drawer>
 

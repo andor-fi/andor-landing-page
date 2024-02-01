@@ -59,7 +59,7 @@ function Protects() {
                         </Box>
                         <Box mt={4}>
                             <Typography variant='h4'>Anti-Rug</Typography>
-                            <Typography variant="body1" className={classes.title}>mechanisms prevent you from trading with suspicious tokens. </Typography>
+                            <Typography variant="body1" className={classes.title}>Mechanisms prevent you from trading with suspicious tokens. </Typography>
                         </Box>
                         <Box mt={4}>
                             <Typography variant='h4'>Anti-Dump</Typography>
