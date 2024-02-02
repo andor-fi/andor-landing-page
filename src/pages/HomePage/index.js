@@ -3,7 +3,7 @@ import BannerSection from './BannerSection';
 import PremiumFeature from './PremiumFeature';
 import WhyAndorFi from './WhyAndorFi';
 import Footer from './Footer'
-import ReviewsSection from './ReviewsSection'
+// import ReviewsSection from './ReviewsSection'
 import AndorMoileFeature from './AndorMoileFeature';
 import Protects from "./Protects"
 import YourJarvis from './YourJarvis';
@@ -22,7 +22,9 @@ function index() {
     <ScrollBar/>
     <Protects/>
     <YourJarvis/>
-    // <ReviewsSection/>
+    {/*
+  <ReviewsSection/>
+  */}
     <ScrollBar/>
     <Footer/>
     </>
