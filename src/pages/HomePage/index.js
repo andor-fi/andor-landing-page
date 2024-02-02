@@ -22,7 +22,7 @@ function index() {
     <ScrollBar/>
     <Protects/>
     <YourJarvis/>
-    <ReviewsSection/>
+    // <ReviewsSection/>
     <ScrollBar/>
     <Footer/>
     </>
